@@ -133,6 +133,13 @@ export FACILITYFIX_PREVIEW=1
 That file is workspace-local and is not part of the source checkout. Fresh installs
 must supply their own secret as described earlier.
 
+## Visual identity
+
+The interface is a dark-first spatial layout: translucent slate panels, restrained
+backdrop blur, and a muted burnt-amber accent. Light mode is available from the
+header control and is stored in the browser. The mark is a building outline with an
+amber structural block—not a gear or mascot.
+
 ## Implemented functionality
 
 ### Reporters
@@ -201,8 +208,10 @@ services/
   issue_service.py           Central authorization and workflow rules
   uploads.py                 Photo validation and controlled storage
 templates/                   Server-rendered HTML by screen responsibility
-static/css/style.css         Responsive styles without a framework
-static/js/app.js             Progressive duplicate-submit assistance
+static/css/style.css         Dark-first spatial UI tokens (slate grey, burnt amber)
+static/js/theme.js           Theme preference before first paint
+static/js/app.js             Duplicate-submit guard and theme toggle
+static/img/                  SVG mark and favicon
 uploads/                     Ignored photos; only .gitkeep is tracked
 instance/                    Ignored persistent database/local runtime files
 tests/                       Standard-library unittest suite
